@@ -1,0 +1,5 @@
+name: Puddles
+main: com.mikeprimm.bukkit.Puddles.Puddles
+version: "${project.version}"
+author: mikeprimm
+

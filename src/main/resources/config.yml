@@ -1,0 +1,42 @@
+# Puddles configuration
+#
+# biome: Settings are by biome (based on org.bukkit.block.Biome enum: default=settings for all undefined biomes)
+#   max-pool-size: maximum number of blocks that can be filled by one pool
+#   border-blocks: list of block IDs allowed for border of pool
+#   check-for-fill-during-rain: if true, only check to fill pools during storms: otherwise, check any time
+#   check-for-empty-during-norain: if true, only check to empty pools when not raining, otherwise check any time
+#   chance-to-fill-pool: percent chance that valid pool location will fill (0=no filling)
+#   change-to-empty-pool: percent chance that valid pool location will empty (0=no emptying)
+#
+# World processing settings: controls overall processing: settings per world
+#   chunks-per-tick: number of chunks processed per tick
+#   block-per-chunk: number of blocks checked per chunk
+#   min-tick-interval: minimum period between ticking the same chunks (every (min-tick-interval * tick-period / 20) seconds)
+#
+# General settings:
+#   tick-period: Tick between processing ticks
+#   world-env: which world environments to process (NORMAL is typically only type with water)
+biome:
+  default:
+    max-pool-size: 8
+    border-blocks: [ 2, 3, 12 ]
+    check-for-fill-during-rain: true
+    check-for-empty-during-norain: true
+    chance-to-fill-pool: 20
+    chance-to-empty-pool: 10
+  DESERT:
+    chance-to-fill-pool: 0
+    chance-to-empty-pool: 20
+  
+general:
+  tick-period: 10
+  world-env: [ "NORMAL" ]
+  chunks-per-tick: 20
+  blocks-per-chunk: 2
+  min-tick-interval: 300
+
+worlds:
+  SomeRandomWorld:
+    chunks-per-tick: 20
+    blocks-per-chunk: 10
+  

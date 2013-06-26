@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mikeprimm</groupId>
+  <artifactId>Puddles</artifactId>
+  <version>0.1</version>
+	<properties>
+	   	<timestamp>${maven.build.timestamp}</timestamp>
+   		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>	
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<BUILD_NUMBER>Dev${timestamp}</BUILD_NUMBER>
+	</properties>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.bukkit</groupId>
+  		<artifactId>bukkit</artifactId>
+  		<version>1.5.2-R1.0</version>
+  	</dependency>
+  </dependencies>
+  	<repositories>
+		<repository>
+			<releases>
+			</releases>
+			<snapshots>
+			</snapshots>
+			<id>bukkit-repo</id>
+			<url>http://repo.bukkit.org/content/repositories/releases/</url>
+		</repository>
+	</repositories>
+  
+</project>
